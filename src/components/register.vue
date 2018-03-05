@@ -133,7 +133,8 @@ export default {
       //   // 拒绝发射验证码req
       //   return
       // }
-      let params = {phone: phone, cert}, fd = this.genFormData(params)
+      let params = {phone: phone, cert}
+      let fd = this.genFormData(params)
       this.$request.formDataPost('sendMessage', fd).then(response => {
         if (response.code !== '200') {
           this.hasError = true
@@ -161,6 +162,7 @@ export default {
 
       ).then((res) => {
         console.log(res)
+        console.log(1)
       })
     }
   }

@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import request from '../apis/request'
+import store from './store/store'
 // import api from '../api/root'
 // 在main.js设置全局的请求次数，请求的间隙
 // axios.defaults.retry = 4
@@ -46,6 +47,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
