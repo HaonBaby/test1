@@ -5,6 +5,7 @@ import login from '../components/login'
 import index from '../components/index'
 import test from '../components/test'
 import register from '../components/register'
+import vuexdemo from '../components/vuexdemo'
 
 Vue.use(Router)
 
@@ -34,6 +35,11 @@ export default new Router({
       path: '/test',
       name: 'test',
       component: test
+    },
+    {
+      path: '/vuexdemo',
+      name: 'vuexdemo',
+      component: vuexdemo
     }
   ]
 })

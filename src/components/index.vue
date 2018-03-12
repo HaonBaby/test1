@@ -2,6 +2,7 @@
   <div class="news-page">
 这是首页
     <button @click="loginout">退出</button>
+    <span>{{name}}</span>
     <div class="left-bar">
       <span>
         最新咨询
@@ -20,8 +21,19 @@
 </template>
 
 <script>
+  import { mapGetters } from 'vuex'
 export default {
   name: 'index',
+  data () {
+    return {
+      mingzi: ''
+    }
+  },
+  computed: {
+    ...mapGetters([
+      'name'
+    ])
+  },
   methods: {
     loginout () {
       localStorage.clear()
